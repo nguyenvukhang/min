@@ -7,6 +7,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      body: ['Inter'],
+      mono: ['"JetBrains Mono"'],
+    },
     extend: {
       colors: {
         brew: {
