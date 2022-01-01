@@ -1,5 +1,9 @@
 function HomePage() {
-  return <div>Welcome to Next.js!</div>
+  return (
+    <div>
+      <span className="bg-red-200">Hello from Next.js!</span>
+    </div>
+  );
 }
 
-export default HomePage
+export default HomePage;
