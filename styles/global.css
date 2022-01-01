@@ -23,3 +23,14 @@
     U+FEFF, U+FFFD;
 }
 
+@layer base {
+  h1 {
+    @apply text-2xl text-blue-500;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  ul {
+    @apply text-blue-400
+  }
+}

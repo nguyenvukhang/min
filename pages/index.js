@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <Container>
       <div>
-        <span className="text-blue-700">Hello from Next.js!</span>
+        <h1>Hello from Next.js!</h1>
         <pre>Hello from Next.js!</pre>
       </div>
     </Container>
