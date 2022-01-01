@@ -11,6 +11,7 @@ export default function Container({ children }) {
       <main
         id="skip"
         className={`flex flex-col px-8 mx-auto w-full max-w-4xl ${bg}`}
+        // className='flex flex-col px-8 mx-auto w-full max-w-4xl bg-blue-100'
       >
         {children}
       </main>
