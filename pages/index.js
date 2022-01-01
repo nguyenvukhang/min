@@ -1,4 +1,4 @@
-import Container from "@/components/Container";
+import Container from '@/components/Container'
 
 function HomePage() {
   return (
@@ -7,7 +7,7 @@ function HomePage() {
         <span className="text-blue-700">Hello from Next.js!</span>
       </div>
     </Container>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

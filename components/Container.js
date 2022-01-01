@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head'
 
 export default function Container({ children }) {
-  const bg = "bg-brew-light dark:bg-brew-dark";
-  const title = "uni";
+  const bg = 'bg-brew-light dark:bg-brew-dark'
+  const title = 'uni'
   return (
     <div className={bg}>
       <Head>
@@ -12,5 +12,5 @@ export default function Container({ children }) {
         {children}
       </main>
     </div>
-  );
+  )
 }

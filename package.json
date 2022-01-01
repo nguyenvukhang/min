@@ -19,5 +19,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }
