@@ -8,7 +8,10 @@ export default function Container({ children }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <main id="skip" className={`flex flex-col justify-center px-8 ${bg}`}>
+      <main
+        id="skip"
+        className={`flex flex-col px-8 mx-auto w-full max-w-4xl ${bg}`}
+      >
         {children}
       </main>
     </div>
