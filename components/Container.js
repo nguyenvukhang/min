@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 function Footer() {
   return (
-    <div className="flex justify-center relative h-48 w-fill">
+    <div className="flex justify-center relative h-28 w-fill">
     <div className="absolute bottom-10">
       <NextLink href="https://github.com/nguyenvukhang">
         <a target="_blank" className="text-gray-500 hover:no-underline">khang</a>
@@ -17,18 +17,20 @@ export default function Container({ children }) {
   const bg = 'bg-brew-light dark:bg-brew-dark'
   const title = 'uni'
   return (
-    <div className={bg}>
+    <div className={`flex flex-col min-h-screen ${bg}`}>
       <Head>
         <title>{title}</title>
       </Head>
+      <div className="mx-auto w-full max-w-3xl flex flex-col min-h-screen">
       <main
         id="skip"
-        className={`flex flex-col px-8 mx-auto w-full max-w-3xl leading-7 ${bg}`}
+        className={`flex flex-col px-8 leading-7 flex-1 ${bg}`}
         // className='flex flex-col px-8 mx-auto w-full max-w-4xl bg-blue-100'
       >
         {children}
-        <Footer />
       </main>
+      <Footer />
+      </div>
     </div>
   )
 }
