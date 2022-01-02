@@ -1,11 +1,12 @@
 import Container from '@/components/Container'
+import mdx from '@/components/MDXComponents'
 
 function HomePage() {
   return (
     <Container>
       <div>
-        <h1>Hello from Next.js!</h1>
-        <pre>Hello from Next.js!</pre>
+        <mdx.h1>Hello from Next.js!</mdx.h1>
+        <mdx.pre>Hello from Next.js!</mdx.pre>
       </div>
     </Container>
   )

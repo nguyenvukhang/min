@@ -3,13 +3,14 @@ import path from 'path'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import Container from '@/components/Container'
+import MDXComponents from '@/components/MDXComponents'
 
 const root = process.cwd()
 
 export default function Page({ source }) {
   return (
     <Container>
-      <MDXRemote {...source}/>
+      <MDXRemote {...source} components={MDXComponents}/>
     </Container>
   )
 }
