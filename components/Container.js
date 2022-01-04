@@ -24,8 +24,7 @@ export default function Container({ children }) {
       <div className="mx-auto w-full max-w-3xl flex flex-col min-h-screen">
       <main
         id="skip"
-        className={`flex flex-col px-8 leading-7 flex-1 ${bg}`}
-        // className='flex flex-col px-8 mx-auto w-full max-w-4xl bg-blue-100'
+        className={`text-gray-800 flex flex-col px-8 leading-7 flex-1 ${bg}`}
       >
         {children}
       </main>

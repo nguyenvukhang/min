@@ -1,37 +1,64 @@
 const h1 = ({ children }) => {
-  return <h1 className="text-2xl font-bold mt-8">{children}</h1>
+  return <h1 className="text-4xl font-bold mt-8 mb-3">{children}</h1>
 }
 const h2 = ({ children }) => {
-  return <h1 className="text-xl font-semibold mt-8">{children}</h1>
+  return <h1 className="text-3xl font-semibold mt-8 mb-3">{children}</h1>
 }
 const h3 = ({ children }) => {
-  return <h1 className="text-lg font-semibold mt-6">{children}</h1>
+  return <h1 className="text-2xl font-semibold mt-6 mb-3">{children}</h1>
 }
 const ul = ({ children }) => {
-  return <ul className="list-disc list-outside ml-4">{children}</ul>
+  return <ul className="list-disc list-outside marker:text-blue-400 ml-6">{children}</ul>
 }
-const li = ({ children }) => {
-  return <li className="list-disc list-outside ml-4">{children}</li>
+const ol = ({ children }) => {
+  return <ol className="list-decimal list-outside marker:text-blue-400 ml-6">{children}</ol>
 }
+
+const codeClass="text-sm font-mono text-pink-500"
+
 const pre = ({ children }) => {
-  return <pre className="text-pink-400">{children}</pre>
+  return <pre className={`${codeClass}`}>{children}</pre>
 }
 const code = ({ children }) => {
-  return <code className="text-pink-400">{children}</code>
+  return <code className={`${codeClass}`}>{children}</code>
+}
+const inlineCode = ({ children }) => {
+  return <inlineCode className={`bg-gray-200 px-1.5 rounded-md ${codeClass}`}>{children}</inlineCode>
 }
 const a = ({ children }) => {
   return <a className="text-blue-500 hover:underline">{children}</a>
+}
+const blockquote = ({ children }) => {
+  return <blockquote className="border-l-4 border-blue-300 px-4 text-gray-500 my-4">{children}</blockquote>
+}
+
+const tableClass="p-1"
+
+const table = ({ children }) => {
+  return <table className={`border border-gray-400 ${tableClass}`}>{children}</table>
+}
+const th = ({ children }) => {
+  return <th className={`bg-gray-200 border border-gray-400 ${tableClass}`}>{children}</th>
+}
+const td = ({ children }) => {
+  return <td className={`border border-gray-400 ${tableClass}`}>{children}</td>
+}
+const tr = ({ children }) => {
+  return <tr className={`border border-gray-400 ${tableClass}`}>{children}</tr>
 }
 
 const MDXComponents = {
   h1,
   h2,
+  table, td, th, tr,
   h3,
   ul,
-  li,
+  ol,
   pre,
   code,
+  inlineCode,
   a,
+  blockquote,
 }
 
 export default MDXComponents
