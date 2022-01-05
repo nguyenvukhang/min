@@ -38,6 +38,7 @@ async function getFileBySlug(slug) {
     'utf-8'
   )
   const source = await serialize(raw)
+  console.log(source)
   return { source }
 }
 
