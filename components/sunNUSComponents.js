@@ -1,21 +1,26 @@
 const h1 = ({ children }) => {
-  return <h1 className="text-4xl font-bold mt-8 mb-3">{children}</h1>
-}
-const h2 = ({ children }) => {
-  var added = ''
+  var gradient = "from-blue-400 to-red-600"
   switch (children) {
-    case 'Website':
-      console.log('GOT THE WEBSITE')
-      added = "text-pink-500"
-      break
-    case 'App':
-      console.log('GOT THE WEBSITE')
-      break
-    case 'Requests':
-      console.log('GOT THE WEBSITE')
+    case 'Tech':
+      gradient = "from-lime-500 to-green-600"
       break
   }
-  return <h2 className={`text-3xl font-semibold mt-8 mb-3 ${added}`}>{children}</h2>
+  return <h1 className={`text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br mt-8 mb-3 ${gradient}`}>{children}</h1>
+}
+const h2 = ({ children }) => {
+  var gradient = "from-blue-400 to-red-600"
+  switch (children) {
+    case 'Website':
+      gradient = "from-teal-500 to-blue-400"
+      break
+    case 'App':
+      gradient = "from-yellow-500 to-red-400"
+      break
+    case 'Requests':
+      gradient = "from-pink-500 to-purple-400"
+      break
+  }
+  return <h2 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br mt-8 mb-3 ${gradient}`}>{children}</h2>
 }
 const h3 = ({ children }) => {
   return <h3 className="text-2xl font-semibold mt-6 mb-3">{children}</h3>
