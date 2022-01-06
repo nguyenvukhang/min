@@ -2,10 +2,23 @@ const h1 = ({ children }) => {
   return <h1 className="text-4xl font-bold mt-8 mb-3">{children}</h1>
 }
 const h2 = ({ children }) => {
-  return <h1 className="text-3xl font-semibold mt-8 mb-3">{children}</h1>
+  var added = ''
+  switch (children) {
+    case 'Website':
+      console.log('GOT THE WEBSITE')
+      added = "text-pink-500"
+      break
+    case 'App':
+      console.log('GOT THE WEBSITE')
+      break
+    case 'Requests':
+      console.log('GOT THE WEBSITE')
+      break
+  }
+  return <h2 className={`text-3xl font-semibold mt-8 mb-3 ${added}`}>{children}</h2>
 }
 const h3 = ({ children }) => {
-  return <h1 className="text-2xl font-semibold mt-6 mb-3">{children}</h1>
+  return <h3 className="text-2xl font-semibold mt-6 mb-3">{children}</h3>
 }
 const ul = ({ children }) => {
   return (
