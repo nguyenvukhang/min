@@ -10,7 +10,7 @@ const root = process.cwd()
 export default function Page({ source }) {
   return (
     <Container>
-      <MDXRemote {...source} components={MDXComponents}/>
+      <MDXRemote {...source} components={MDXComponents} />
     </Container>
   )
 }
@@ -38,7 +38,6 @@ async function getFileBySlug(slug) {
     'utf-8'
   )
   const source = await serialize(raw)
-  console.log(source)
   return { source }
 }
 
