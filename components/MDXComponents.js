@@ -1,5 +1,10 @@
 const h1 = ({ children }) => {
-  return <h1 className="text-4xl font-bold mt-8 mb-3">{children}</h1>
+  const anchor = children.toLowerCase().replace(/ /g, '-')
+  return (
+    <h1 id={anchor} className="text-4xl font-semibold mt-8 mb-3">
+      {children}
+    </h1>
+  )
 }
 const h2 = ({ children }) => {
   const anchor = children.toLowerCase().replace(/ /g, '-')
@@ -9,7 +14,7 @@ const h2 = ({ children }) => {
     </h2>
   )
 }
-const a = ({ children, href }) => {
+const a = ({ children, href="" }) => {
   const props =
     href[0] === '#'
       ? {
