@@ -7,8 +7,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    letterSpacing: {
+      tight: '-0.015em',
+    },
     fontFamily: {
-      body: ['Inter'],
+      head: ['"Readex Pro"'],
+      sans: ['Inter'],
       mono: ['"JetBrains Mono"'],
     },
     extend: {
