@@ -1,17 +1,38 @@
-import Link from 'next/link'
-
 const h1 = ({ children }) => {
   return <h1 className="text-4xl font-bold mt-8 mb-3">{children}</h1>
 }
 const h2 = ({ children }) => {
-  return <h1 className="text-3xl font-semibold mt-8 mb-3">{children}</h1>
+  const anchor = children.toLowerCase().replace(/ /g, '-')
+  return (
+    <h2 id={anchor} className="text-3xl font-semibold mt-8 mb-3">
+      {children}
+    </h2>
+  )
+}
+const a = ({ children, href }) => {
+  const props =
+    href[0] === '#'
+      ? {
+          href: `#${href.split('#')[1].toLowerCase().replace(/ /g, '-')}`,
+          color: 'text-blue-500'
+        }
+      : {
+          target: '_blank',
+          href,
+          color: 'text-blue-500'
+        }
+  return (
+    <a {...props} className={`hover:underline ${props.color}`}>
+      {children}
+    </a>
+  )
 }
 const h3 = ({ children }) => {
-  return <h1 className="text-2xl font-semibold mt-6 mb-3">{children}</h1>
+  return <h3 className="text-2xl font-semibold mt-6 mb-3">{children}</h3>
 }
 const ul = ({ children }) => {
   return (
-    <ul className="list-disc list-outside marker:text-blue-400 ml-6">
+    <ul className="list-disc list-outside marker:text-blue-400 ml-6 mb-2">
       {children}
     </ul>
   )
@@ -37,14 +58,6 @@ const inlineCode = ({ children }) => {
     <inlineCode className={`bg-gray-200 px-1.5 rounded-md ${codeClass}`}>
       {children}
     </inlineCode>
-  )
-}
-const a = ({ children, href }) => {
-  // TODO: only open new tab if link has different domain name
-  return (
-    <a target="_blank" href={href} className="text-blue-500 hover:underline">
-      {children}
-    </a>
   )
 }
 const blockquote = ({ children }) => {
