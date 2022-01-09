@@ -18,7 +18,8 @@ module.exports = {
     extend: {
       colors: {
         brew: {
-          light: colors.gray[100],
+          // light: colors.gray[100],
+          light: "#ffffff",
           dark: colors.gray[900],
         },
       },
