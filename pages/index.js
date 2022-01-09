@@ -1,5 +1,6 @@
 import Container from '@/components/Container'
 import { Divider } from '@/components/Icons'
+import ShortNotes from '@/components/ShortNotes'
 
 function HomePage() {
   const linkList = [
@@ -30,6 +31,7 @@ function HomePage() {
           })}
         </p>
         <Divider />
+        <ShortNotes />
       </div>
     </Container>
   )

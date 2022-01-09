@@ -7,6 +7,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontSize: {
+      sm: ['0.875rem', '1.25rem'],
+      base: ['1rem', '1.75rem'],
+      lg: ['1.125rem', '1.75rem'],
+      xl: ['1.25rem', '1.75rem'],
+    },
     letterSpacing: {
       tight: '-0.015em',
     },
