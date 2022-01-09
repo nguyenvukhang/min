@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import { VscArrowLeft } from '@/components/Icons'
 
 const Button = ({ children, className, onClick, href = '/' }) => {
   return (
     <Link href={href}>
       <div
-        className={`select-none cursor-pointer hover:bg-gray-100 active:bg-gray-200 active:drop-shadow-md text-teal-600 border-teal-500 border w-fit px-2 py-1 rounded-md ${className}`}
+        className={`select-none cursor-pointer hover:bg-gray-100 active:bg-gray-200 active:drop-shadow-md text-teal-600 border-teal-500 border w-fit rounded-md ${className}`}
         onClick={onClick}
       >
         {children}
@@ -13,4 +14,13 @@ const Button = ({ children, className, onClick, href = '/' }) => {
   )
 }
 
+const Back = () => {
+  return (
+    <Button className="px-2 py-1 mb-4">
+      <VscArrowLeft size={14} />
+    </Button>
+  )
+}
+
 export default Button
+export { Back }

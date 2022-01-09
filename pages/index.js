@@ -38,8 +38,6 @@ const InDevelopment = () => {
     <>
       <Divider />
       <ShortNotes />
-      <Divider />
-      <ShortNotes />
     </>
   )
 }
@@ -56,6 +54,7 @@ function HomePage() {
         years, now based in Neovim.
       </p>
       <LinkList />
+      <InDevelopment/>
     </Container>
   )
 }

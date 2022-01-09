@@ -4,17 +4,14 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import Container from '@/components/Container'
 import MDXComponents from '@/components/MDXComponents'
-import Button from '@/components/Buttons'
-import { VscArrowLeft } from '@/components/Icons'
+import { Back } from '@/components/Buttons'
 
 const root = process.cwd()
 
 export default function Page({ source }) {
   return (
     <Container>
-      <Button>
-        <VscArrowLeft size={14} />
-      </Button>
+      <Back/>
       <MDXRemote {...source} components={MDXComponents} />
     </Container>
   )
