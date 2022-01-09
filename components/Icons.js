@@ -24,7 +24,7 @@ const BsDashLg = ({ color, size, title, className }) => {
 
 const Divider = () => {
   return (
-    <div className='flex justify-center text-gray-400 my-8'>
+    <div className='flex justify-center text-gray-400 mt-8 mb-9'>
       <BsDashLg />
     </div>
   )
