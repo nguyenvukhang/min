@@ -4,8 +4,8 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import Container from '@/components/Container'
 import MDXComponents from '@/components/MDXComponents'
-import Button from '../components/Button'
-import { VscArrowLeft } from '../components/Icons'
+import Button from '@/components/Buttons'
+import { VscArrowLeft } from '@/components/Icons'
 
 const root = process.cwd()
 
