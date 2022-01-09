@@ -11,7 +11,7 @@ const root = process.cwd()
 export default function Page({ source }) {
   return (
     <Container>
-      <Back/>
+      <Back />
       <MDXRemote {...source} components={MDXComponents} />
     </Container>
   )
@@ -24,9 +24,10 @@ async function getFiles(type) {
 // this is ran before getStaticProps
 export async function getStaticPaths() {
   const files = await getFiles('content')
+  const mdxOnly = files.filter((e) => e.includes('mdx'))
   return {
     fallback: false,
-    paths: files.map((f) => ({
+    paths: mdxOnly.map((f) => ({
       params: {
         slug: f.replace(/\.mdx/, ''),
       },
