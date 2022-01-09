@@ -19,9 +19,12 @@ module.exports = {
       colors: {
         brew: {
           // light: colors.gray[100],
-          light: "#ffffff",
+          light: '#ffffff',
           dark: colors.gray[900],
         },
+      },
+      maxWidth: {
+        '1.5xl': '36em',
       },
     },
   },
