@@ -7,7 +7,7 @@ function HomePage() {
   ]
   return (
     <Container>
-      <div className="mt-8 tracking-tight">
+      <div className="mt-8">
         <h1 className="text-xl font-head my-8">Nguyễn Vũ Khang</h1>
         <p className="my-4">
           <b>Student of Math.</b> Enjoys building software. Writes Bash, Lua,

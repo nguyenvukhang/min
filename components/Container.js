@@ -6,7 +6,7 @@ function Footer() {
     <div className="flex w-fill border-t-2 mb-10">
       <div className="mt-4">
         <NextLink href="https://github.com/nguyenvukhang">
-          <a target="_blank" className="text-gray-800 hover:no-underline tracking-tight">
+          <a target="_blank" className="text-gray-800 hover:no-underline">
             Nguyễn Vũ Khang
           </a>
         </NextLink>
@@ -23,15 +23,15 @@ export default function Container({ children }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className='mx-auto max-w-1.5xl'>
-      <div className="flex flex-col min-h-screen">
-        <main
-          className={`text-gray-800 flex flex-col leading-7 flex-1 ${bg}`}
-        >
-          {children}
-        </main>
-        <Footer />
-      </div>
+      <div className="mx-auto w-full max-w-1.5xl tracking-tight">
+        <div className="flex flex-col min-h-screen">
+          <main
+            className={`text-gray-800 flex flex-col leading-7 flex-1 ${bg}`}
+          >
+            {children}
+          </main>
+          <Footer />
+        </div>
       </div>
     </div>
   )

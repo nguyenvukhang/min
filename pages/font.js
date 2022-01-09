@@ -3,7 +3,7 @@ import Container from '@/components/Container'
 function HomePage() {
   return (
     <Container>
-      <div className="mt-8 tracking-tight">
+      <div className="mt-8">
         <h2 className="font-head">Font test</h2>
         <p>Inter by default</p>
         <p className="font-head">Readex by tailwind</p>
