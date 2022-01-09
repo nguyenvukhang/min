@@ -48,14 +48,14 @@ function HomePage() {
   return (
     <Container>
       <h1 className="text-xl font-head mt-1 mb-4">Nguyễn Vũ Khang</h1>
-        <p className="my-4">
+      <p className="my-4">
         <Impostor />
-          Enjoys building software. Writes Bash, Lua, JavaScript, HTML and CSS.
-          Likes to make websites. Cares about usability, accessibility, and
-          maintainability. Started out in Notepad, lived in Sublime for a few
-          years, now based in Neovim.
-        </p>
-          <LinkList />
+        Enjoys building software. Writes Bash, Lua, JavaScript, HTML and CSS.
+        Likes to make websites. Cares about usability, accessibility, and
+        maintainability. Started out in Notepad, lived in Sublime for a few
+        years, now based in Neovim.
+      </p>
+      <LinkList />
     </Container>
   )
 }
