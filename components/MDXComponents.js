@@ -19,12 +19,12 @@ const a = ({ children, href="" }) => {
     href[0] === '#'
       ? {
           href: `#${href.split('#')[1].toLowerCase().replace(/ /g, '-')}`,
-          color: 'text-blue-500'
+          color: 'text-teal-500'
         }
       : {
           target: '_blank',
           href,
-          color: 'text-blue-500'
+          color: 'text-teal-500'
         }
   return (
     <a {...props} className={`hover:underline ${props.color}`}>
@@ -37,14 +37,14 @@ const h3 = ({ children }) => {
 }
 const ul = ({ children }) => {
   return (
-    <ul className="list-disc list-outside marker:text-blue-400 ml-6 mb-2">
+    <ul className="list-disc list-outside marker:text-teal-500 ml-6 mb-2">
       {children}
     </ul>
   )
 }
 const ol = ({ children }) => {
   return (
-    <ol className="list-decimal list-outside marker:text-blue-400 ml-6">
+    <ol className="list-decimal list-outside marker:text-teal-500 ml-6">
       {children}
     </ol>
   )
@@ -67,7 +67,7 @@ const inlineCode = ({ children }) => {
 }
 const blockquote = ({ children }) => {
   return (
-    <blockquote className="border-l-4 border-blue-300 px-4 text-gray-500 my-4">
+    <blockquote className="border-l-4 border-teal-400 px-4 text-gray-500 my-4">
       {children}
     </blockquote>
   )

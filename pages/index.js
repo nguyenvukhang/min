@@ -1,5 +1,6 @@
+import Button from '@/components/Button'
 import Container from '@/components/Container'
-import { Divider } from '@/components/Icons'
+import { VscArrowLeft, Divider } from '@/components/Icons'
 import ShortNotes from '@/components/ShortNotes'
 import Link from 'next/link'
 
@@ -47,17 +48,18 @@ const InDevelopment = () => {
 function HomePage() {
   return (
     <Container>
-      <div className="mt-8">
-        <h1 className="text-xl font-head my-8">Nguyễn Vũ Khang</h1>
+      <h1 className="text-xl font-head mt-1 mb-4">Nguyễn Vũ Khang</h1>
         <p className="my-4">
-          <Impostor />
+        <Impostor />
           Enjoys building software. Writes Bash, Lua, JavaScript, HTML and CSS.
           Likes to make websites. Cares about usability, accessibility, and
           maintainability. Started out in Notepad, lived in Sublime for a few
           years, now based in Neovim.
         </p>
-        <LinkList />
-      </div>
+          <LinkList />
+        <Button>
+        <VscArrowLeft size={14}/>
+        </Button>
     </Container>
   )
 }

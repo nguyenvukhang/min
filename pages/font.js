@@ -1,4 +1,6 @@
+import Button from '@/components/Button'
 import Container from '@/components/Container'
+import { VscArrowLeft } from '@/components/Icons'
 
 function HomePage() {
   return (
@@ -13,6 +15,9 @@ function HomePage() {
         <p style={{ fontFamily: 'Inter' }}>Inter by js</p>
         <p style={{ fontFamily: 'JetBrains Mono' }}>JetBrains Mono by js</p>
       </div>
+      <Button>
+        <VscArrowLeft size={14} />
+      </Button>
     </Container>
   )
 }
