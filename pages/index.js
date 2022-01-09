@@ -1,6 +1,5 @@
-import Button from '@/components/Button'
 import Container from '@/components/Container'
-import { VscArrowLeft, Divider } from '@/components/Icons'
+import { Divider } from '@/components/Icons'
 import ShortNotes from '@/components/ShortNotes'
 import Link from 'next/link'
 
@@ -57,9 +56,6 @@ function HomePage() {
           years, now based in Neovim.
         </p>
           <LinkList />
-        <Button>
-        <VscArrowLeft size={14}/>
-        </Button>
     </Container>
   )
 }
