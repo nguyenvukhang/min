@@ -1,8 +1,16 @@
 import Button, { Back } from '@/components/Buttons'
 import Container from '@/components/Container'
 import { Divider, VscArrowLeft } from '@/components/Icons'
+import NotesList from '@/components/NotesList'
 import ShortNotes from '@/components/ShortNotes'
 import Link from 'next/link'
+import yaml from 'js-yaml'
+import fs from 'fs'
+import path from 'path'
+import { JSON_SCHEMA } from 'js-yaml'
+import fastJson from 'fast-json-stringify'
+
+const root = process.cwd()
 
 const Impostor = () => {
   return (
@@ -34,28 +42,32 @@ const LinkList = () => {
   )
 }
 
-const InDevelopment = () => {
-  return (
-    <>
-      <Divider />
-      <ShortNotes />
-      <Divider />
-      <ShortNotes />
-    </>
-  )
-}
-
-function HomePage() {
+function NotesPage({ source }) {
   return (
     <Container>
-      <Back/>
-      <h1 className="text-xl font-head mt-4 mb-4">Short Notes</h1>
-      <p className="my-4">
-        <Impostor />
+      <Back />
+      <h1 className="text-xl font-head mt-4 mb-1">Short Notes</h1>
+      <p className="text-xs tracking-normal text-gray-400 mb-12">
+        Bits and pieces of my life.
       </p>
-      <LinkList />
+      <NotesList source={source} />
     </Container>
   )
 }
 
-export default HomePage
+async function getNotes() {
+  const raw = fs.readFileSync(path.join(root, 'content', `notes.yml`), 'utf-8')
+  const source = await yaml.load(raw, null, JSON_SCHEMA, true)
+  return source
+}
+
+export const getStaticProps = async () => {
+  const source = await getNotes()
+  return {
+    props: {
+      source
+    },
+  }
+}
+
+export default NotesPage

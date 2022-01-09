@@ -7,9 +7,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    letterSpacing: {
-      tight: '-0.015em',
-    },
     fontFamily: {
       head: ['"Readex Pro"'],
       sans: ['Inter'],
@@ -25,6 +22,9 @@ module.exports = {
       },
       fontSize: {
         base: ['1rem', '1.75rem'],
+      },
+      letterSpacing: {
+        tight: '-0.015em',
       },
       maxWidth: {
         '1.5xl': '36em',
