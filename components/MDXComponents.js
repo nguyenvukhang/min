@@ -1,97 +1,104 @@
+const fonts = {
+  head: 'font-semibold font-head',
+  code: 'text-sm font-mono text-pink-500',
+}
+
+const tags = {
+  h1: `${fonts.head} text-4xl mt-8 mb-6`,
+  h2: `${fonts.head} text-2xl mt-8 mb-3`,
+  h3: `${fonts.head} text-xl mt-8 mb-3`,
+  a: 'hover:underline text-teal-500',
+  ul: 'list-disc list-outside marker:text-teal-500 ml-6 mb-2',
+  ol: 'list-decimal list-outside marker:text-teal-500 ml-6',
+  inlineCode: 'bg-gray-200 px-1.5 rounded-md',
+  blockquote: 'border-l-4 border-teal-400 px-4 text-gray-500 my-4',
+  table: 'p-1 border border-gray-400',
+  th: 'p-1 bg-gray-200 border border-gray-400',
+  td: 'p-1 border border-gray-400',
+  tr: 'p-1 border border-gray-400',
+}
+
 const h1 = ({ children }) => {
   const anchor = children.toLowerCase().replace(/ /g, '-')
   return (
-    <h1 id={anchor} className="text-4xl font-semibold mt-8 mb-3">
+    <h1 id={anchor} className={tags.h1}>
       {children}
     </h1>
   )
 }
+
 const h2 = ({ children }) => {
   const anchor = children.toLowerCase().replace(/ /g, '-')
   return (
-    <h2 id={anchor} className="text-3xl font-semibold mt-8 mb-3">
+    <h2 id={anchor} className={tags.h2}>
       {children}
     </h2>
   )
 }
-const a = ({ children, href="" }) => {
+
+const a = ({ children, href = '' }) => {
   const props =
     href[0] === '#'
       ? {
           href: `#${href.split('#')[1].toLowerCase().replace(/ /g, '-')}`,
-          color: 'text-teal-500'
         }
       : {
           target: '_blank',
           href,
-          color: 'text-teal-500'
         }
   return (
-    <a {...props} className={`hover:underline ${props.color}`}>
+    <a {...props} className={`${tags.a} ${props.color}`}>
       {children}
     </a>
   )
 }
+
 const h3 = ({ children }) => {
-  return <h3 className="text-2xl font-semibold mt-6 mb-3">{children}</h3>
-}
-const ul = ({ children }) => {
-  return (
-    <ul className="list-disc list-outside marker:text-teal-500 ml-6 mb-2">
-      {children}
-    </ul>
-  )
-}
-const ol = ({ children }) => {
-  return (
-    <ol className="list-decimal list-outside marker:text-teal-500 ml-6">
-      {children}
-    </ol>
-  )
+  return <h3 className={tags.h3}>{children}</h3>
 }
 
-const codeClass = 'text-sm font-mono text-pink-500'
+const ul = ({ children }) => {
+  return <ul className={tags.ul}>{children}</ul>
+}
+
+const ol = ({ children }) => {
+  return <ol className={tags.ol}>{children}</ol>
+}
 
 const pre = ({ children }) => {
-  return <pre className={`${codeClass}`}>{children}</pre>
+  return <pre className={`${fonts.code}`}>{children}</pre>
 }
+
 const code = ({ children }) => {
-  return <code className={`${codeClass}`}>{children}</code>
+  return <code className={`${fonts.code}`}>{children}</code>
 }
+
 const inlineCode = ({ children }) => {
   return (
-    <inlineCode className={`bg-gray-200 px-1.5 rounded-md ${codeClass}`}>
+    <inlineCode className={`${tags.inlineCode} ${fonts.code}`}>
       {children}
     </inlineCode>
   )
 }
-const blockquote = ({ children }) => {
-  return (
-    <blockquote className="border-l-4 border-teal-400 px-4 text-gray-500 my-4">
-      {children}
-    </blockquote>
-  )
-}
 
-const tableClass = 'p-1'
+const blockquote = ({ children }) => {
+  return <blockquote className={tags.blockquote}>{children}</blockquote>
+}
 
 const table = ({ children }) => {
-  return (
-    <table className={`border border-gray-400 ${tableClass}`}>{children}</table>
-  )
+  return <table className={tags.table}>{children}</table>
 }
+
 const th = ({ children }) => {
-  return (
-    <th className={`bg-gray-200 border border-gray-400 ${tableClass}`}>
-      {children}
-    </th>
-  )
+  return <th className={tags.th}>{children}</th>
 }
+
 const td = ({ children }) => {
-  return <td className={`border border-gray-400 ${tableClass}`}>{children}</td>
+  return <td className={tags.td}>{children}</td>
 }
+
 const tr = ({ children }) => {
-  return <tr className={`border border-gray-400 ${tableClass}`}>{children}</tr>
+  return <tr className={tags.tr}>{children}</tr>
 }
 
 const MDXComponents = {
