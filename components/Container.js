@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import NextLink from 'next/link'
 
-function Footer() {
+function GithubFooter() {
   return (
     <div className="flex w-fill border-t-2 mb-10 mt-28">
       <div className="mt-4">
@@ -10,6 +10,18 @@ function Footer() {
             Nguyễn Vũ Khang
           </a>
         </NextLink>
+      </div>
+    </div>
+  )
+}
+
+function Footer() {
+  return (
+    <div className="flex w-fill border-t-2 mb-10 mt-28">
+      <div className="mt-4">
+        <span className="text-gray-800 hover:no-underline">
+          Nguyễn Vũ Khang
+        </span>
       </div>
     </div>
   )
