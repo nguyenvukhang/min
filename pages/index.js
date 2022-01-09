@@ -1,4 +1,5 @@
 import Container from '@/components/Container'
+import { Divider } from '@/components/Icons'
 
 function HomePage() {
   const linkList = [
@@ -23,11 +24,12 @@ function HomePage() {
                 <a className="text-teal-500" target="_blank" href={e[1]}>
                   {e[0]}
                 </a>
-                {(i < linkList.length - 1) ? <span>{`, `}</span> : null}
+                {i < linkList.length - 1 ? <span>{`, `}</span> : null}
               </>
             )
           })}
         </p>
+        <Divider />
       </div>
     </Container>
   )
