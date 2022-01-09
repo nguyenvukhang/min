@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 function Footer() {
   return (
-    <div className="flex w-fill border-t-2 mb-10">
+    <div className="flex w-fill border-t-2 mb-10 mt-28">
       <div className="mt-4">
         <NextLink href="https://github.com/nguyenvukhang">
           <a target="_blank" className="text-gray-800 hover:no-underline">
