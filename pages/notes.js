@@ -8,7 +8,6 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
 import { JSON_SCHEMA } from 'js-yaml'
-import fastJson from 'fast-json-stringify'
 
 const root = process.cwd()
 
