@@ -11,7 +11,7 @@ const tags = {
   ul: 'list-disc list-outside marker:text-teal-500 ml-6 mb-2',
   ol: 'list-decimal list-outside marker:text-teal-500 ml-6',
   inlineCode: 'bg-gray-200 px-1.5 rounded-md',
-  blockquote: 'border-l-4 border-teal-400 px-4 text-gray-500 my-4',
+  blockquote: 'border-l-4 border-gray-200 px-4 text-gray-500 my-4',
   table: 'p-1 border border-gray-400',
   th: 'p-1 bg-gray-200 border border-gray-400',
   td: 'p-1 border border-gray-400',
