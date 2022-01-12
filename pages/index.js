@@ -17,28 +17,19 @@ const LinkList = () => {
     ['Instagram', 'https://instagram.com/nvkse'],
   ]
   return (
-    <p className="my-4">
+    <div className="my-4">
       {`Also on: `}
       {links.map((e, i) => {
         return (
-          <>
+          <div key={i}>
             <a className="text-teal-500" target="_blank" href={e[1]}>
               {e[0]}
             </a>
             {i < links.length - 1 ? <span>{`, `}</span> : null}
-          </>
+          </div>
         )
       })}
-    </p>
-  )
-}
-
-const InDevelopment = () => {
-  return (
-    <>
-      <Divider />
-      <ShortNotes />
-    </>
+    </div>
   )
 }
 
@@ -54,7 +45,8 @@ function HomePage() {
         years, now based in Neovim.
       </p>
       <LinkList />
-      <InDevelopment/>
+      <Divider />
+      <ShortNotes />
     </Container>
   )
 }
