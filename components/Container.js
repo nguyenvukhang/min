@@ -35,7 +35,7 @@ export default function Container({ children }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="mx-auto w-full max-w-1.5xl tracking-tight">
+      <div className="mx-auto max-w-2xl px-12 w-full tracking-tight">
         <div className="flex flex-col min-h-screen">
           <main
             className={`text-gray-800 text-base flex flex-col flex-1 mt-16 ${bg}`}
