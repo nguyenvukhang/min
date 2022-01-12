@@ -3,7 +3,7 @@ import { VscArrowLeft } from '@/components/Icons'
 
 const Button = ({ children, className, onClick, href = '/' }) => {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <div
         className={`select-none cursor-pointer hover:bg-gray-100 active:bg-gray-200 active:drop-shadow-md text-teal-600 border-teal-500 border w-fit rounded-md ${className}`}
         onClick={onClick}

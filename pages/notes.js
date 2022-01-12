@@ -30,7 +30,7 @@ const LinkList = () => {
       {links.map((e, i) => {
         return (
           <>
-            <a className="text-teal-500" target="_blank" href={e[1]}>
+            <a className="text-teal-500" target="_blank" rel="noreferrer" href={e[1]}>
               {e[0]}
             </a>
             {i < links.length - 1 ? <span>{`, `}</span> : null}

@@ -58,7 +58,7 @@ const inlineCode = ({ children }) => {
 const a = ({ children, href }) => {
   // TODO: only open new tab if link has different domain name
   return (
-    <a target="_blank" href={href} className="text-blue-500 hover:underline">
+    <a target="_blank" href={href} rel="noreferrer" className="text-blue-500 hover:underline">
       {children}
     </a>
   )
