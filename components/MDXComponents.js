@@ -1,12 +1,13 @@
 const fonts = {
-  head: 'font-semibold font-head',
+  head: 'font-head tracking-normal',
   code: 'text-sm font-mono text-pink-500',
 }
 
 const tags = {
-  h1: `${fonts.head} text-4xl mt-8 mb-6`,
-  h2: `${fonts.head} text-2xl mt-8 mb-3`,
-  h3: `${fonts.head} text-xl mt-8 mb-3`,
+  h1: `${fonts.head} text-2xl mt-8 mb-5`,
+  subtitle: `font-sans text-gray-400 text-sm mb-6`,
+  h2: `${fonts.head} text-2xl mt-8 mb-5`,
+  h3: `${fonts.head} text-2xl mt-8 mb-5`,
   a: 'hover:underline text-teal-500',
   ul: 'list-disc list-outside marker:text-teal-500 ml-6 mb-2',
   ol: 'list-decimal list-outside marker:text-teal-500 ml-6',
@@ -20,10 +21,14 @@ const tags = {
 
 const h1 = ({ children }) => {
   const anchor = children.toLowerCase().replace(/ /g, '-')
+  const [main, sub] = children.split('|')
   return (
-    <h1 id={anchor} className={tags.h1}>
-      {children}
-    </h1>
+    <div className={tags.h1}>
+      <h1 id={anchor} className="mb-1">
+        {main}
+      </h1>
+      <h6 className={tags.subtitle}>{sub}</h6>
+    </div>
   )
 }
 
@@ -104,11 +109,11 @@ const tr = ({ children }) => {
 const MDXComponents = {
   h1,
   h2,
+  h3,
   table,
   td,
   th,
   tr,
-  h3,
   ul,
   ol,
   pre,
