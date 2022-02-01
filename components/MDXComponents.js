@@ -11,12 +11,14 @@ const tags = {
   a: 'hover:underline text-teal-500',
   ul: 'list-disc list-outside marker:text-teal-500 ml-6 mb-2',
   ol: 'list-decimal list-outside marker:text-teal-500 ml-6',
-  inlineCode: 'bg-gray-200 px-1.5 rounded-md',
+  inlineCode: `bg-gray-200 px-1.5 rounded-md ${fonts.code}`,
   blockquote: 'border-l-4 border-gray-200 px-4 text-gray-500 my-4',
-  table: 'p-1 border border-gray-400',
+  table: 'p-1 border border-gray-400 mt-3 mb-4',
   th: 'p-1 bg-gray-200 border border-gray-400',
   td: 'p-1 border border-gray-400',
   tr: 'p-1 border border-gray-400',
+  pre: `${fonts.code}`,
+  code: `${fonts.code}`,
 }
 
 const h1 = ({ children }) => {
@@ -71,19 +73,15 @@ const ol = ({ children }) => {
 }
 
 const pre = ({ children }) => {
-  return <pre className={`${fonts.code}`}>{children}</pre>
+  return <pre className={`${tags.pre}`}>{children}</pre>
 }
 
 const code = ({ children }) => {
-  return <code className={`${fonts.code}`}>{children}</code>
+  return <code className={`${tags.code}`}>{children}</code>
 }
 
 const inlineCode = ({ children }) => {
-  return (
-    <inlineCode className={`${tags.inlineCode} ${fonts.code}`}>
-      {children}
-    </inlineCode>
-  )
+  return <inlineCode className={`${tags.inlineCode}`}>{children}</inlineCode>
 }
 
 const blockquote = ({ children }) => {
@@ -107,20 +105,20 @@ const tr = ({ children }) => {
 }
 
 const MDXComponents = {
+  a,
+  blockquote,
+  code,
   h1,
   h2,
   h3,
+  inlineCode,
+  ol,
+  pre,
   table,
   td,
   th,
   tr,
   ul,
-  ol,
-  pre,
-  code,
-  inlineCode,
-  a,
-  blockquote,
 }
 
 export default MDXComponents
