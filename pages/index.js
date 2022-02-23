@@ -1,6 +1,7 @@
 import Container from '@/components/Container'
 import { Divider } from '@/components/Icons'
 import ShortNotes from '@/components/ShortNotes'
+import Posts from '@/components/Posts'
 import Link from 'next/link'
 
 const Impostor = () => {
@@ -47,6 +48,8 @@ function HomePage() {
       <LinkList />
       <Divider />
       <ShortNotes />
+      <Divider />
+      <Posts />
     </Container>
   )
 }
